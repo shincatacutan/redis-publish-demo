@@ -2,7 +2,7 @@
 Implementing Redis Pub/Sub using Spring Boot + Redisson
 
 Technologies:
-Java
-Spring boot
-Rest
-Redis
+* Java
+* Spring boot
+* Rest
+* Redis
