@@ -10,10 +10,10 @@
 		<relativePath />
 	</parent>
 	<groupId>com.markandshin.springboot.redis</groupId>
-	<artifactId>redis-pubsub-demo</artifactId>
+	<artifactId>redis-publish-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>redis-pubsub-demo</name>
-	<description>pubsub demo</description>
+	<name>redis-publish-demo</name>
+	<description>redis publish demo</description>
 
 	<properties>
 		<java.version>1.8</java.version>
