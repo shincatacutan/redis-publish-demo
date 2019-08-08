@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Message Broadcaster by markandshin</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  $(function() {
+    $("form").on('submit', function(e) {
+      e.preventDefault();
+
+      const publishData = {
+        'topic' : $("#topic").val(),
+        'message' : $("#message").val()
+      };
+
+      $.ajax({
+        url : 'http://localhost:8080/demo/publish',
+        type : 'POST',
+        data : JSON.stringify(publishData),
+        contentType : 'application/json',
+        success : function(got) {
+          return console.log(got.id);
+        }
+      });
+    });
+  });
+</script>
+</head>
+<body>
+	<noscript>
+		<h2 style="color: #ff0000">Seems your browser doesn't support
+			Javascript! Websocket relies on Javascript being enabled. Please
+			enable Javascript and reload this page!</h2>
+	</noscript>
+	<div id="main-content">
+		<h1>Message Broadcaster</h1>
+		<form>
+			<div>
+				<label for="topic">Topic</label><input type="text" name="topic"
+					id="topic" />
+			</div>
+			<div>
+				<label for="message">Message</label><input type="text"
+					name="message" id="message" />
+			</div>
+			<input type="submit" value="Broadcast" />
+		</form>
+	</div>
+</body>
+</html>
